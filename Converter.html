@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="converter.js" defer></script>
+  </head>
+  <script>
+
+var state;
+function change1(int ){
+    if(int==1){
+        document.getElementById("inputKeyword").innerHTML="Kilogram:"
+        document.getElementById("outputKeyword").innerHTML="Pounds:"
+
+        document.getElementById("kgInput").value="";
+        document.getElementById("poundsOutput").value=""
+        document.getElementById("btn0").style.backgroundColor='green';
+        document.getElementById("btn1").style.backgroundColor='';
+        document.getElementById("btn2").style.backgroundColor='';
+        document.getElementById("btn3").style.backgroundColor='';
+        document.getElementById("btn4").style.backgroundColor='';
+        document.getElementById("btn5").style.backgroundColor='';
+    }
+
+    else if(int==2){
+        document.getElementById("inputKeyword").innerHTML="Pounds:"
+        document.getElementById("outputKeyword").innerHTML="Kilograms:"
+        document.getElementById("kgInput").value="";
+        document.getElementById("poundsOutput").value=""
+        document.getElementById("btn1").style.backgroundColor='green';
+        document.getElementById("btn0").style.backgroundColor='';
+        document.getElementById("btn2").style.backgroundColor='';
+        document.getElementById("btn3").style.backgroundColor='';
+        document.getElementById("btn4").style.backgroundColor='';
+        document.getElementById("btn5").style.backgroundColor='';
+    }
+    else if(int==3){
+        document.getElementById("inputKeyword").innerHTML="Kilometer:"
+        document.getElementById("outputKeyword").innerHTML="Miles:"
+        document.getElementById("kgInput").value="";
+        document.getElementById("poundsOutput").value=""
+        document.getElementById("btn2").style.backgroundColor='green';
+        document.getElementById("btn0").style.backgroundColor='';
+        document.getElementById("btn1").style.backgroundColor='';
+        document.getElementById("btn3").style.backgroundColor='';
+        document.getElementById("btn4").style.backgroundColor='';
+        document.getElementById("btn5").style.backgroundColor='';
+    }
+    else if(int==4){
+        document.getElementById("inputKeyword").innerHTML="Miles:"
+        document.getElementById("outputKeyword").innerHTML="Kilograms:"
+        document.getElementById("kgInput").value="";
+        document.getElementById("poundsOutput").value=""
+        document.getElementById("btn3").style.backgroundColor='green';
+        document.getElementById("btn0").style.backgroundColor='';
+        document.getElementById("btn2").style.backgroundColor='';
+        document.getElementById("btn1").style.backgroundColor='';
+        document.getElementById("btn4").style.backgroundColor='';
+        document.getElementById("btn5").style.backgroundColor='';
+    }
+    else if(int==5){
+        document.getElementById("inputKeyword").innerHTML="Fahrenheit:"
+        document.getElementById("outputKeyword").innerHTML="Celsius:"
+        document.getElementById("kgInput").value="";
+        document.getElementById("poundsOutput").value=""
+        document.getElementById("btn4").style.backgroundColor='green';
+        document.getElementById("btn0").style.backgroundColor='';
+        document.getElementById("btn2").style.backgroundColor='';
+        document.getElementById("btn3").style.backgroundColor='';
+        document.getElementById("btn1").style.backgroundColor='';
+        document.getElementById("btn5").style.backgroundColor='';
+    }
+    else if(int==6){
+        document.getElementById("inputKeyword").innerHTML="Celsius:"
+        document.getElementById("outputKeyword").innerHTML="Fahrenheit:"
+        document.getElementById("kgInput").value="";
+        document.getElementById("poundsOutput").value=""
+        document.getElementById("btn5").style.backgroundColor='green';
+        document.getElementById("btn0").style.backgroundColor='';
+        document.getElementById("btn2").style.backgroundColor='';
+        document.getElementById("btn3").style.backgroundColor='';
+        document.getElementById("btn4").style.backgroundColor='';
+        document.getElementById("btn1").style.backgroundColor='';
+    }
+}
+   function kgToPounds() {
+    let kg = document.getElementById("kgInput").value;
+    document.getElementById("poundsOutput").value = (kg * 2.20462).toFixed(2);
+}
+function poundsToKg() {
+        let pounds = document.getElementById("kgInput").value;    
+    document.getElementById("poundsOutput").value = (pounds / 2.20462).toFixed(2);
+}
+function kmToMiles() {
+    let km = document.getElementById("kgInput").value;    
+    document.getElementById("poundsOutput").value = (km * 0.621371).toFixed(2);
+}
+
+function milesToKm() {
+    let miles = document.getElementById("kgInput").value;    
+    document.getElementById("poundsOutput").value = (miles / 0.621371).toFixed(2);
+}
+function fahrenheitToCelsius() {
+    let fahrenheit = document.getElementById("kgInput").value;    
+    document.getElementById("poundsOutput").value = ((fahrenheit - 32) * 5 / 9).toFixed(2);
+}
+
+function celsiusToFahrenheit() {
+    let celsius = document.getElementById("kgInput").value;    
+    document.getElementById("poundsOutput").value = ((celsius * 9 / 5) + 32).toFixed(2);
+}
+function updateValue(val){
+    document.getElementById("kgInput").value+=val;
+    if(state==1){
+        kgToPounds();
+    }
+    else if(state==2){
+        poundsToKg();
+    }
+    else if(state==3){
+        kmToMiles();
+    }
+    else if(state==4){
+        milesToKm();
+    }
+    else if(state==5){
+        fahrenheitToCelsius();
+    }
+    else if(state==6){
+        celsiusToFahrenheit();
+    }
+}
+function toDecimal(){
+    document.getElementById("kgInput").value;
+}
+function removeData(){
+    document.getElementById("kgInput").value=null;
+    if(state==1){
+        kgToPounds();
+
+    }
+    else if(state==2){
+        poundsToKg();
+    }
+    else if(state==3){
+        kmToMiles();
+    }
+    else if(state==4){
+        milesToKm();
+    }
+    else if(state==5){
+        fahrenheitToCelsius();
+    }
+    else if(state==6){
+        celsiusToFahrenheit();
+    }
+}
+    
+  </script>
+  <body>
+    <div class="container mt-5 d-flex" style="justify-content: center;flex-direction: column;align-items: center;">
+      <h1 class="text-center mb-4">Unit Converter</h1>
+        <!-- Kg to Pounds & Pounds to Kg -->
+        <div class="d-flex p-5" style="background-color: antiquewhite;width: 50%;height: 70vh;flex-direction: column;justify-content: center;border-radius: 15px;">
+          <h3 class="row"><span class="btn col" id="btn0" onclick="state=1;change1(1)">Kg to Pounds</span><span class="btn col" id="btn1" onclick="state=2;change1(2)">Pounds to Kg</span></h3>
+          <h3 class="row"><span class="btn col" id="btn2" onclick="state=3;change1(3)" >Km to Miles</span><span class="btn col" id="btn3" onclick="state=4;change1(4)">Miles to Km</span></h3>
+          <h3 class="row"><span class="btn col" id="btn4" onclick="state=5;change1(5)" >Fahrenheit to Celsius</span><span class="btn col" id="btn5" onclick="state=6;change1(6)" >Celsius to Fahrenheit</span></h3>
+
+          <form >
+            <div class="form-group">
+              <label for="kgInput" id="inputKeyword">
+                Select conersion type:
+              </label>
+              <input
+                type="number"
+                class="form-control"
+                id="kgInput"
+                oninput="if(state==1){
+                    kgToPounds();
+            
+                }
+                else if(state==2){
+                    poundsToKg();
+                }
+                else if(state==3){
+                    kmToMiles();
+                }
+                else if(state==4){
+                    milesToKm();
+                }
+                else if(state==5){
+                    fahrenheitToCelsius();
+                }
+                else if(state==6){
+                    celsiusToFahrenheit();
+                }
+                "
+              />
+              <div class="row" style="justify-content: space-evenly;">
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(1)">
+                1
+            </div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(2)">2</div>
+
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(3)">3</div>
+              </div>
+              <div class="row" style="justify-content: space-evenly;">
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(4)">4</div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(5)">5</div>
+
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(6)">6</div>
+              </div>
+              <div class="row" style="justify-content: space-evenly;">
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(7)">7</div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(8)">8</div>
+
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(9)">9</div>
+              </div>
+              <div class="row" style="justify-content: space-evenly;">
+                <div class="col-md-3 btn btn-secondary" onclick="toDecimal()">.</div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(0)">0</div>
+
+                <div class="col-md-3 btn btn-secondary" onclick="removeData()">C</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="poundsOutput" id="outputKeyword">Converting into:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="poundsOutput"
+              />
+            </div>
+          </form>
+        </div>
+       
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
