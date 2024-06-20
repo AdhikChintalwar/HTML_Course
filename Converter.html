@@ -23,7 +23,7 @@ function change1(int ){
 
         document.getElementById("kgInput").value="";
         document.getElementById("poundsOutput").value=""
-        document.getElementById("btn0").style.backgroundColor='#54B4D3';
+        document.getElementById("btn0").style.backgroundColor='#fd7e14';
         document.getElementById("btn1").style.backgroundColor='';
         document.getElementById("btn2").style.backgroundColor='';
         document.getElementById("btn3").style.backgroundColor='';
@@ -36,7 +36,7 @@ function change1(int ){
         document.getElementById("outputKeyword").innerHTML="Kilograms:"
         document.getElementById("kgInput").value="";
         document.getElementById("poundsOutput").value=""
-        document.getElementById("btn1").style.backgroundColor='#54B4D3';
+        document.getElementById("btn1").style.backgroundColor='#fd7e14';
         document.getElementById("btn0").style.backgroundColor='';
         document.getElementById("btn2").style.backgroundColor='';
         document.getElementById("btn3").style.backgroundColor='';
@@ -48,7 +48,7 @@ function change1(int ){
         document.getElementById("outputKeyword").innerHTML="Miles:"
         document.getElementById("kgInput").value="";
         document.getElementById("poundsOutput").value=""
-        document.getElementById("btn2").style.backgroundColor='#54B4D3';
+        document.getElementById("btn2").style.backgroundColor='#fd7e14';
         document.getElementById("btn0").style.backgroundColor='';
         document.getElementById("btn1").style.backgroundColor='';
         document.getElementById("btn3").style.backgroundColor='';
@@ -60,7 +60,7 @@ function change1(int ){
         document.getElementById("outputKeyword").innerHTML="Kilometers:"
         document.getElementById("kgInput").value="";
         document.getElementById("poundsOutput").value=""
-        document.getElementById("btn3").style.backgroundColor='#54B4D3';
+        document.getElementById("btn3").style.backgroundColor='#fd7e14';
         document.getElementById("btn0").style.backgroundColor='';
         document.getElementById("btn2").style.backgroundColor='';
         document.getElementById("btn1").style.backgroundColor='';
@@ -72,7 +72,7 @@ function change1(int ){
         document.getElementById("outputKeyword").innerHTML="Celsius:"
         document.getElementById("kgInput").value="";
         document.getElementById("poundsOutput").value=""
-        document.getElementById("btn4").style.backgroundColor='#54B4D3';
+        document.getElementById("btn4").style.backgroundColor='#fd7e14';
         document.getElementById("btn0").style.backgroundColor='';
         document.getElementById("btn2").style.backgroundColor='';
         document.getElementById("btn3").style.backgroundColor='';
@@ -84,7 +84,7 @@ function change1(int ){
         document.getElementById("outputKeyword").innerHTML="Fahrenheit:"
         document.getElementById("kgInput").value="";
         document.getElementById("poundsOutput").value=""
-        document.getElementById("btn5").style.backgroundColor='#54B4D3';
+        document.getElementById("btn5").style.backgroundColor='#fd7e14';
         document.getElementById("btn0").style.backgroundColor='';
         document.getElementById("btn2").style.backgroundColor='';
         document.getElementById("btn3").style.backgroundColor='';
@@ -167,27 +167,27 @@ function removeData(){
     
   </script>
   <body>
-    <div class="container mt-4 d-flex" style="justify-content: center;flex-direction: column;align-items: center;">
+    <div class="container mt-4 d-flex" style="justify-content: center;flex-direction: column;align-items: center;font-family: transforma;">
         <!-- Kg to Pounds & Pounds to Kg -->
-        <div class="d-flex p-4" style="background-color: rgba(232, 229, 226, 0.666);width: 50%;height: 80vh;flex-direction: column;justify-content: center;border-radius: 15px;box-shadow: 10px;">
-            <h1 class="text-center mb-4">Unit Converter</h1>
+        <div class="d-flex p-4" style="background-color: rgba(20, 20, 20, 0.728);width: 50%;height: 80vh;flex-direction: column;justify-content: center;border-radius: 45px;box-shadow: 10px;">
+            <h1 class="text-center mb-4 text-white" style="font-family: transforma;">Unit Converter</h1>
 
             <h3 class="row d-flex" style="justify-content: space-evenly;">
-            <span class="btn col-3 " style="border:1px solid black ;color: rgba(60, 64, 64, 0.82)" id="btn0" onclick="state=1;change1(1)"><b>Kg -> Lb</b></span>
-            <span class="btn col-3" style="border:1px solid black ;color: rgba(60, 64, 64, 0.82);" id="btn1" onclick="state=2;change1(2)"><b>Lb -> Kg</b></span>
-            <span class="btn col-3 " style="border:1px solid black ;color: rgba(60, 64, 64, 0.82);" id="btn2" onclick="state=3;change1(3)" ><b>Km -> Mi</b></span>
+            <span class="btn col-3 text-white" style="border:1px solid black ;" id="btn0" onclick="state=1;change1(1)"><b>Kg -> Lb</b></span>
+            <span class="btn col-3 text-white" style="border:1px solid black ;" id="btn1" onclick="state=2;change1(2)"><b>Lb -> Kg</b></span>
+            <span class="btn col-3 text-white" style="border:1px solid black ;" id="btn2" onclick="state=3;change1(3)" ><b>Km -> Mi</b></span>
         </h3>
         <h3 class="row d-flex" style="justify-content: space-evenly;">
-              <span class="btn col-3" style="border:1px solid black ;color: rgba(60, 64, 64, 0.82);" id="btn3" onclick="state=4;change1(4)"><b>Mi -> Km</b></span>
-            <span class="btn col-3 " style="border:1px solid black ;color: rgba(60, 64, 64, 0.82);" id="btn4" onclick="state=5;change1(5)" ><b>F -> C</b></span>
-            <span class="btn col-3" style="border:1px solid black ;color: rgba(60, 64, 64, 0.82);" id="btn5" onclick="state=6;change1(6)" ><b>C -> F</b></span>
+              <span class="btn col-3 text-white" style="border:1px solid black ;" id="btn3" onclick="state=4;change1(4)"><b>Mi -> Km</b></span>
+            <span class="btn col-3 text-white" style="border:1px solid black ;" id="btn4" onclick="state=5;change1(5)" ><b>F -> C</b></span>
+            <span class="btn col-3 text-white" style="border:1px solid black ;" id="btn5" onclick="state=6;change1(6)" ><b>C -> F</b></span>
         </h3>
 
           <form >
             <div class="form-group" >
                 <div class="input-group" style="padding: 16px;">
 
-                    <label class="input-group-text bg-info text-white" for="kgInput" id="inputKeyword">
+                    <label class="input-group-text text-white" for="kgInput" id="inputKeyword" style="background-color: #fd7e14;">
                       Select conersion type:
                     </label>
                     <input
@@ -220,7 +220,7 @@ function removeData(){
                 </div>
                 <div class="form-group input-group" style="padding-left: 16px;padding-right: 16px;">
                         
-                    <label class="input-group-text bg-info text-white" for="poundsOutput" id="outputKeyword">Converting into:</label>
+                    <label class="input-group-text text-white" for="poundsOutput" id="outputKeyword" style="background-color: #fd7e14;">Converting into:</label>
                     <input
                       type="number"
                       class="form-control"
@@ -230,29 +230,29 @@ function removeData(){
                 
               <div class="row" style="justify-content: space-evenly;">
                 <div class="col-md-3 btn btn-secondary" onclick="updateValue(1)">
-                1
+                <b>1</b>
             </div>
-                <div class="col-md-3 btn btn-secondary" onclick="updateValue(2)">2</div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(2)"><b>2</b></div>
 
-                <div class="col-md-3 btn btn-secondary" onclick="updateValue(3)">3</div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(3)"><b>3</b></div>
               </div><br>
               <div class="row" style="justify-content: space-evenly;">
-                <div class="col-md-3 btn btn-secondary" onclick="updateValue(4)">4</div>
-                <div class="col-md-3 btn btn-secondary" onclick="updateValue(5)">5</div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(4)"><b>4</b></div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(5)"><b>5</b></div>
 
-                <div class="col-md-3 btn btn-secondary" onclick="updateValue(6)">6</div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(6)"><b>6</b></div>
               </div><br>
               <div class="row" style="justify-content: space-evenly;">
-                <div class="col-md-3 btn btn-secondary" onclick="updateValue(7)">7</div>
-                <div class="col-md-3 btn btn-secondary" onclick="updateValue(8)">8</div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(7)"><b>7</b></div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(8)"><b>8</b></div>
 
-                <div class="col-md-3 btn btn-secondary" onclick="updateValue(9)">9</div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(9)"><b>9</b></div>
               </div><br>
               <div class="row" style="justify-content: space-evenly;">
-                <div class="col-md-3 btn btn-secondary" onclick="toDecimal()">.</div>
-                <div class="col-md-3 btn btn-secondary" onclick="updateValue(0)">0</div>
+                <div class="col-md-3 btn btn-secondary" onclick="toDecimal()"><b>.</b></div>
+                <div class="col-md-3 btn btn-secondary" onclick="updateValue(0)"><b>0</b></div>
 
-                <div class="col-md-3 btn btn-secondary" onclick="removeData()">C</div>
+                <div class="col-md-3 btn btn-secondary" onclick="removeData()"><b>C</b></div>
               </div>
             </div>
             
