@@ -118,8 +118,31 @@ function celsiusToFahrenheit() {
     let celsius = document.getElementById("kgInput").value;    
     document.getElementById("poundsOutput").value = ((celsius * 9 / 5) + 32).toFixed(2);
 }
+
+function hasOneDecimalPlace(num) {
+    // Convert the number to a string
+    let numStr = num.toString();
+
+    console.log("inside check func" + numStr);
+
+    // Check if the number contains a '.'
+    if (numStr.includes('.')) {
+        // Split the number at the decimal point
+        let parts = numStr.split('.');
+        
+        // Check if the part after the decimal point has exactly one digit
+        console.log(parts[1]);
+        return parts[1].length === 1;
+    }
+    
+    // If there's no decimal point, it can't have one decimal place
+    return false;
+}
+
+
 function updateValue(val){
-    document.getElementById("kgInput").value+=val;
+     document.getElementById("kgInput").value+=val;
+
     if(state==1){
         kgToPounds();
     }
@@ -139,8 +162,13 @@ function updateValue(val){
         celsiusToFahrenheit();
     }
 }
-function toDecimal(){
-    document.getElementById("kgInput").value;
+
+function toDecimal() {
+   let inputValue= document.getElementById("kgInput").value;
+    inputValue= parseFloat(inputValue);
+   document.getElementById("kgInput").value =(inputValue*1.0).toFixed(1);
+
+    
 }
 function removeData(){
     document.getElementById("kgInput").value="";
@@ -169,7 +197,7 @@ function removeData(){
   <body>
     <div class="container mt-4 d-flex" style="justify-content: center;flex-direction: column;align-items: center;font-family: transforma;">
         <!-- Kg to Pounds & Pounds to Kg -->
-        <div class="d-flex p-4" style="background-color: rgba(20, 20, 20, 0.728);width: 50%;height: 80vh;flex-direction: column;justify-content: center;border-radius: 45px;box-shadow: 10px;">
+        <div class="d-flex p-4" style="background-color: rgba(20, 20, 20, 0.646);width: 50%;height: 80vh;flex-direction: column;justify-content: center;border-radius: 45px;box-shadow: 10px;">
             <h1 class="text-center mb-4 text-white" style="font-family: transforma;">Unit Converter</h1>
 
             <h3 class="row d-flex" style="justify-content: space-evenly;">
